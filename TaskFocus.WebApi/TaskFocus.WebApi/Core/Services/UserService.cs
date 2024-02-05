@@ -41,7 +41,11 @@ public class UserService : IUserService
             Email = createUserModel.Email.ToLower(),
             HashedPassword = hashedPassword,
             Salt = salt,
-            Name = createUserModel.Name
+            Name = createUserModel.Name,
+            TaskManagerUserSettings = new TaskManagerUserSettingsEntity
+            {
+                StrictModelEnabled = false
+            }
         };
 
         var createdUserEntity = await _userRepository.CreateAsync(userEntity);

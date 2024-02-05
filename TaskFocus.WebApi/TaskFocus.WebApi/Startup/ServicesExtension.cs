@@ -11,6 +11,7 @@ namespace TaskFocus.WebApi.Startup
             services.AddScoped<IAuthenticationService, AuthenticationService>();
             services.AddScoped<IUserService, UserService>();
             services.AddScoped<ICryptographyService, CryptographyService>();
+            services.AddScoped<ITaskManagerUserSettingsService, TaskManagerUserSettingsService>();
         }
     }
 }

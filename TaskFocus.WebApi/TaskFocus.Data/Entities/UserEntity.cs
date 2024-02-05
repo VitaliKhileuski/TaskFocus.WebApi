@@ -9,4 +9,6 @@ public class UserEntity : BaseEntity
     public string Salt { get; set; }
     
     public string Name { get; set; }
+    
+    public TaskManagerUserSettingsEntity TaskManagerUserSettings { get; set; }
 }

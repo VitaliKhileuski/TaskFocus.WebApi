@@ -8,6 +8,8 @@ namespace TaskFocus.WebApi.Startup
         public static void RegisterRepositories(this IServiceCollection services)
         {
             services.AddScoped<IUserRepository, UserRepository>();
+            services.AddScoped<ITaskRepository, TaskRepository>();
+            services.AddScoped<ITaskManagerUserSettingsRepository, TaskManagerUserSettingsRepository>();
         }
     }
 }

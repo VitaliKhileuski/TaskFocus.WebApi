@@ -15,6 +15,10 @@ namespace TaskFocus.Data
         }
         
         public DbSet<UserEntity> Users { get; set; }
+        
+        public DbSet<TaskManagerUserSettingsEntity> TaskManagerUserSettings { get; set; }
+        
+        public DbSet<TaskEntity> Tasks { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
