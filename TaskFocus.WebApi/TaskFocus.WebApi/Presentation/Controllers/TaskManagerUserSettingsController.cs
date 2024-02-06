@@ -1,11 +1,12 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
 using TaskFocus.WebApi.Core.Interfaces;
 using TaskFocus.WebApi.Core.Models.Settings;
 
 namespace TaskFocus.WebApi.Presentation.Controllers;
 
 [ApiController]
-
+[Authorize]
 [Route("api/[controller]")]
 public class TaskManagerUserSettingsController : ControllerBase
 {

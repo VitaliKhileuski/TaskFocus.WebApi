@@ -33,9 +33,9 @@ public class TaskManagerUserSettingsService : ITaskManagerUserSettingsService
     {
         var taskManagerUserSettingsEntity = await _taskManagerUserSettingsRepository.FindAsync(x => x.UserId == userId);
 
-        _mapper.Map(taskManagerUserSettingsEntity, updateTaskManagerUserSettingsModel);
+        _mapper.Map(updateTaskManagerUserSettingsModel, taskManagerUserSettingsEntity);
 
-        var taskManagerUserSettingsUpdatedEntity =
+        var taskManagerUserSettingsUpdatedEntity = await 
             _taskManagerUserSettingsRepository.UpdateAsync(taskManagerUserSettingsEntity);
         
         var taskManagerUserSettingsResponseModel =

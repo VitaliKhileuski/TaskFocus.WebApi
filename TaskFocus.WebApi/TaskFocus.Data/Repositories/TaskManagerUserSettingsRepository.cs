@@ -1,4 +1,5 @@
 ﻿using System.Linq;
+using Microsoft.EntityFrameworkCore;
 using TaskFocus.Data.Entities;
 using TaskFocus.Data.Interfaces;
 
@@ -10,6 +11,8 @@ public class TaskManagerUserSettingsRepository : BaseRepository<TaskManagerUserS
     
     public TaskManagerUserSettingsRepository(Context context) : base(context)
     {
-        CollectionWithIncludes = context.TaskManagerUserSettings;
+        CollectionWithIncludes = context.TaskManagerUserSettings
+            .Include(x => x.Labels)
+            .Include(x => x.Priorities);
     }
 }

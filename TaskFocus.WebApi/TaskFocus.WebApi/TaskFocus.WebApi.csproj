@@ -31,8 +31,6 @@
 
     <ItemGroup>
       <Folder Include="Core\Helpers" />
-      <Folder Include="Core\Models\Tasks\" />
-      <Folder Include="Presentation\Mappers" />
       <Folder Include="Presentation\Validators" />
     </ItemGroup>
 
